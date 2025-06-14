@@ -13,7 +13,7 @@ const Modal = ({ person }: any) => {
       style={{
         position: "fixed",
         top: 0,
-        left: 200,
+        left: 100,
         width: 250,
         backgroundColor: "#fff",
         border: "1px solid #000",
