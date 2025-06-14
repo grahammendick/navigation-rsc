@@ -1,5 +1,4 @@
 import Toggle from "./Toggle";
-import Panel from "./Panel";
 import { getPeople } from "./data";
 
 const People = async ({ children }: any) => {
@@ -11,8 +10,7 @@ const People = async ({ children }: any) => {
         <ul>
           {people.map(({ id, name }) => (
             <li key={id}>
-              <Toggle id={id}>{name}</Toggle>
-              <Panel id={id}>{children}</Panel>
+              <Toggle id={id} name={name}>{children}</Toggle>
             </li>
           ))}
         </ul>
