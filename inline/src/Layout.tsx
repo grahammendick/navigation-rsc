@@ -6,7 +6,7 @@ import Person from "./Person";
 const Layout = async () => {
   return (
     <People>
-      <SceneView active="people" name="person" refetch={["id"]}>
+      <SceneView active="people" name="person">
         <Person />
       </SceneView>
     </People>
@@ -14,4 +14,3 @@ const Layout = async () => {
 };
 
 export default Layout;
-

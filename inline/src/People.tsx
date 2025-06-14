@@ -1,4 +1,4 @@
-import { RefreshLink } from "navigation-react";
+import Toggle from "./Toggle";
 import Panel from "./Panel";
 import { getPeople } from "./data";
 
@@ -11,9 +11,7 @@ const People = async ({ children }: any) => {
         <ul>
           {people.map(({ id, name }) => (
             <li key={id}>
-              <RefreshLink navigationData={{ id }} disableActive>
-                {name}
-              </RefreshLink>
+              <Toggle id={id}>{name}</Toggle>
               <Panel id={id}>{children}</Panel>
             </li>
           ))}
