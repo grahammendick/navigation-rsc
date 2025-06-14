@@ -9,7 +9,7 @@ const App = async ({ url }: any) => {
   return (
     <html>
       <head>
-        <title>Navigation React</title>
+        <title>Inside</title>
       </head>
       <body>
         <NavigationProvider url={url}>

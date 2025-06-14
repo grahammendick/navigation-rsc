@@ -1,7 +1,7 @@
-import { StateNavigator } from 'navigation';
+import { StateNavigator } from "navigation";
 
 const stateNavigator = new StateNavigator([
-  {key: 'people', route: '{id?}', defaults: {id: 0}},
+  { key: "people", route: "{id?}", defaults: { id: 0 } },
 ]);
 stateNavigator.historyManager.stop();
 

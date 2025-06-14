@@ -7,7 +7,7 @@ const People = async () => {
   const people = await getPeople();
   return (
     <>
-      <h1>People</h1>
+      <h1>Inside</h1>
       <div>
         <ul>
           {people.map(({ id, name }) => (
