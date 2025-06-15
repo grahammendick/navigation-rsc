@@ -1,12 +1,13 @@
 "use client";
 import { RefreshLink, useNavigationEvent, useRefetch } from "navigation-react";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 const Modal = ({ person }: any) => {
   const {
     oldState,
     data: { id },
   } = useNavigationEvent();
+  const modal = useRef<HTMLDialogElement>(null);
   useRefetch(({ data, oldData }) => data.id && data.id !== oldData.id);
   const { name, dateOfBirth, gender, email, phone } = person;
   useEffect(() => {
@@ -16,11 +17,11 @@ const Modal = ({ person }: any) => {
         ""
       );
     }
-    if (id) document.querySelector("dialog")?.showModal();
-    else document.querySelector("dialog")?.close();
+    if (id) modal.current?.showModal();
+    else modal.current?.close();
   });
   return (
-    <dialog>
+    <dialog ref={modal}>
       <RefreshLink
         navigating={(e) => {
           if (!!window.history.state.noback) return true;
