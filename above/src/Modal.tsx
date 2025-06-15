@@ -10,7 +10,12 @@ const Modal = ({ person }: any) => {
   useRefetch(({ data, oldData }) => data.id && data.id !== oldData.id);
   const { name, dateOfBirth, gender, email, phone } = person;
   useEffect(() => {
-    if (!oldState) window.history.replaceState({ noback: true }, "");
+    if (!oldState) {
+      window.history.replaceState(
+        { ...window.history.state, noback: true },
+        ""
+      );
+    }
     if (id) document.querySelector("dialog")?.showModal();
     else document.querySelector("dialog")?.close();
   });
