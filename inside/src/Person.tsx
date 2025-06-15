@@ -1,4 +1,5 @@
 import { useNavigationEvent } from "navigation-react";
+import Details from "./Details";
 import { getPerson } from "./data";
 
 const Person = async () => {
@@ -7,16 +8,7 @@ const Person = async () => {
   } = useNavigationEvent();
   if (!id) return null;
   const person = await getPerson(id);
-  const { name, dateOfBirth, gender, email, phone } = person;
-  return (
-    <>
-      <h2>{name}</h2>
-      <div>{email}</div>
-      <div>{dateOfBirth}</div>
-      <div>{gender}</div>
-      <div>{phone}</div>
-    </>
-  );
+  return <Details person={person} />;
 };
 
 export default Person;

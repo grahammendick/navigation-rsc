@@ -1,6 +1,7 @@
 "use server-entry";
 import { getPeople } from "./data";
-import { RefreshLink, SceneView } from "navigation-react";
+import { SceneView } from "navigation-react";
+import Toggle from "./Toggle";
 import Person from "./Person";
 
 const People = async () => {
@@ -12,12 +13,10 @@ const People = async () => {
         <ul>
           {people.map(({ id, name }) => (
             <li key={id}>
-              <RefreshLink navigationData={{ id }} disableActive>
-                {name}
-              </RefreshLink>
+              <Toggle id={id}>{name}</Toggle>
             </li>
           ))}
-          <SceneView active="people" name="person" refetch={["id"]}>
+          <SceneView active="people" name="person">
             <Person />
           </SceneView>
         </ul>
