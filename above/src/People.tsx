@@ -11,7 +11,7 @@ const People = async () => {
         <ul>
           {people.map(({ id, name }) => (
             <li key={id}>
-              <RefreshLink navigationData={{ id }} disableActive>
+              <RefreshLink navigationData={{ id }}>
                 {name}
               </RefreshLink>
             </li>
