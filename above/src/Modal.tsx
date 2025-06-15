@@ -3,6 +3,7 @@ import { RefreshLink, useNavigationEvent, useRefetch } from "navigation-react";
 
 const Modal = ({ person }: any) => {
   const {
+    oldState,
     data: { id },
   } = useNavigationEvent();
   useRefetch(({ data, oldData }) => data.id && data.id !== oldData.id);
@@ -19,7 +20,17 @@ const Modal = ({ person }: any) => {
         border: "1px solid #000",
       }}
     >
-      <RefreshLink navigationData={{ id: null }}>Close</RefreshLink>
+      <RefreshLink
+        navigating={(e) => {
+          if (!oldState) return true;
+          e.preventDefault();
+          window.history.back();
+          return false;
+        }}
+        navigationData={{ id: null }}
+      >
+        Close
+      </RefreshLink>
       <h2>{name}</h2>
       <div>{email}</div>
       <div>{dateOfBirth}</div>
