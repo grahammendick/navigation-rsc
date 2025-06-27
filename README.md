@@ -15,10 +15,34 @@ function App() {
       <SceneView refetch={[]}>
         <Trending />
       </SceneView>
-      <SceneView refetch={["hashtag"]}>
+      <SceneView refetch={['hashtag']}>
         <Tweets />
       </SceneView>
     </>
   );
 }
+```
+
+
+```tsx
+function Trending() {
+  return (
+    <SceneView refetch={['hashtag']}>
+      <Tweets />
+    </SceneView>
+  );
+}
+```
+
+```tsx
+function Layout() {
+  return (
+    <Trending>
+      <SceneView refetch={['hashtag']}>
+        <Tweets />
+      </SceneView>
+    </Trending>
+  );
+}
+
 ```
