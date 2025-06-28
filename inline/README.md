@@ -1,4 +1,4 @@
-# Inside
+# Inline
 A Master/Details page where the details appear inline with the master list.
 
 ```
