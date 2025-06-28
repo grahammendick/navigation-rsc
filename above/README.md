@@ -14,4 +14,9 @@ A Master/Details page where the details appear in a modal above the master list.
 |   |       |                |
 |   |       |                |
 +----------------------------+
+
+npm install
+npm run build
+npm run start
+open http://localhost:3001/
 ```

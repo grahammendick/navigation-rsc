@@ -14,4 +14,9 @@ A Master/Details page where the details appear inside the master content.
 |   |       |   ------ ----  |
 |   |       |   --- ----- -  |
 +----------------------------+
+
+npm install
+npm run build
+npm run start
+open http://localhost:3001/
 ```
