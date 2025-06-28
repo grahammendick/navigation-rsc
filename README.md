@@ -67,7 +67,7 @@ function Trending() {
 }
 ```
 
-Another common scenario is where the master list expands to show the details inline, just below the selected item. Parallel routes don't even pretend to support this one so your only option is to go back to a single page. But the original problem that we whacked down with parallel routes pops its head up again. When the user selects a trending hashtag the related tweets might show up beneath a completely different hashtag.
+Another common scenario is where the master list expands to show the details inline, just below the selected item. Parallel routes don't even pretend to support this one so your only option is to go back to a single page. But the original problem that parallel routes whacked down now pops its head up again. When the user selects a trending hashtag the related tweets might show up beneath a completely different hashtag.
 
 ```
 +----------------------------+
