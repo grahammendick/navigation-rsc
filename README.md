@@ -55,7 +55,7 @@ The App Router's solution to the problem is parallel routes. But now you have 2 
 +----------------------------+
 ```
 
-Parallel routes are happy as long as the related tweets starts after the trending list finishes. But they can't handle mixing the two together. You can't make a hole in the master content and slot the details into it. You can only append the details to the master list. But parallel routes are part of the App Router ideology only. With the Navigation router you can render the `Tweets` component anywhere inside the `Trending` one.
+Parallel routes are happy as long as the related tweets starts after the trending list finishes. But they can't handle mixing the two together. You can't make a hole in the master content and slot the details into it. You can only append the details to the master list. But parallel routes are part of the App Router ideology only. With the Navigation router you can render the `Tweets` component anywhere you want inside the `Trending` one.
 
 ```tsx
 function Trending() {
