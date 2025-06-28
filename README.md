@@ -84,6 +84,7 @@ Another common scenario is where the master list expands to show the details inl
 +----------------------------+
 ```
 
+But what looks like a flaw with RSC is again only a problem with the App Router. With the Navigation router you pass the details as a child of the master so that the master can render it beneath the selected item. This repo contains running examples of all the three scenarios so you can start unlearning the App Router and learn RSC instead.
 
 ```tsx
 function Layout() {
