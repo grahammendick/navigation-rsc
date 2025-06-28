@@ -38,7 +38,7 @@ function App() {
 }
 ```
 
-The App Router's solution to the problem is parallel routes. But now you have 2 problems. Parallel routes allow you to fetch just a part of the page, for example, fetching the tweets without refetching the hashtags. But they're so restrictive that they end up being square pegs for the round holes in your pages. Let's change the Twitter example so that the related tweets are shown alongside the trending hashtags instead overlaid in a modal.
+The App Router's solution to the problem is parallel routes. But now you have 2 problems. Parallel routes allow you to fetch just a part of the page, for example, fetching the tweets without refetching the trending hashtags. But they're so restrictive that they end up being square pegs for the round holes in your pages. Let's change the Twitter example so that the related tweets are shown alongside the trending hashtags instead overlaid in a modal.
 
 ```
 +----------------------------+
